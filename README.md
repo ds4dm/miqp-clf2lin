@@ -3,7 +3,7 @@ Pierre Bonami, Andrea Lodi and Giulia Zarpellon
 
 ---
 
-This code accompanies our paper ***A Classifier to Decide on the Linearization of MIQPs in CPLEX***.
+This code accompanies our paper ***A Classifier to Decide on the Linearization of Mixed-Integer Quadratic Problems in CPLEX***.
 
 In this project, we 
 + translate the algorithmic question of whether to linearize convex Mixed-Integer Quadratic Programming problems (MIQPs) 

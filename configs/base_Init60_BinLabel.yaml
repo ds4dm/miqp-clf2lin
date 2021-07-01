@@ -1,0 +1,36 @@
+# Configuration file for learning experiment
+
+# general
+data_setting: BinLabel
+random_seeds: [0, 1, 2, 3, 4]
+description: |
+  Baseline learning experiment using 60 initial features (44+11+5), in the BinLabel setting.
+  No feature selection is performed, no use of regression nor weights.
+  Scoring function in model selection is default accuracy.
+short_name: base
+plot_title: Baseline - BinLabel - Init60
+save: true
+verbose: true
+
+# regression setting
+reg: false
+reg_fts: None
+reg_target: None
+reg_model: None
+
+# feature selector setting
+selector_type: None
+max_fts: None
+mtl_targets: None  # ['root_RLPTimeDiff', 'root_RelSignRDBDiff', 'Weight']
+poly_fts: false
+fts_samplew: false
+
+# classification setting
+clf_fts: Init60
+scorer: accuracy
+clf_samplew: false
+
+# pathways
+data_path: ../data/anonym_all_data_features_times.pkl
+fts_dict_path: ../data/fts_subsets.pkl
+save_path: ../results

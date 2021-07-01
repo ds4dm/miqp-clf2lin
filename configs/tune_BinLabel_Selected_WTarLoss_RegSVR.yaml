@@ -1,0 +1,38 @@
+# Configuration file for learning experiment
+
+# general
+data_setting: BinLabel
+random_seeds: [0, 1, 2, 3, 4]
+description: |
+  Tuning/Re-engineering: learning experiment using Selected set of features (21=17+4+0), in the BinLabel setting.
+  No feature selection is performed, no sample weights.
+  Regression is performed on Selected features to predict root_RelSignRDBDiff.
+  Predictions from SVR added to the classification features.
+  Scoring function in classification model selection is WTarLoss.
+short_name: tune
+plot_title: BinLabel - Selected - WTarLoss - RegSVR
+save: true
+verbose: true
+
+# regression setting
+reg: true
+reg_fts: Selected
+reg_target: root_RelSignRDBDiff
+reg_model: SVR
+
+# feature selector setting
+selector_type: None
+max_fts: None
+mtl_targets: None  # ['root_RLPTimeDiff', 'root_RelSignRDBDiff', 'Weight']
+poly_fts: false
+fts_samplew: false
+
+# classification setting
+clf_fts: Selected
+scorer: wtarget_loss
+clf_samplew: false
+
+# pathways
+data_path: ../data/anonym_all_data_features_times.pkl
+fts_dict_path: ../data/fts_subsets.pkl
+save_path: ../results

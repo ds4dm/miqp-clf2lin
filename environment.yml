@@ -1,0 +1,13 @@
+name: miqp
+dependencies:
+ - python=3.5
+ - numpy
+ - scipy
+ - scikit-learn
+ - jupyter
+ - pandas=0.23.4
+ - seaborn=0.8
+ - pip:
+   - watermark
+   - pytest
+   - pyyaml
